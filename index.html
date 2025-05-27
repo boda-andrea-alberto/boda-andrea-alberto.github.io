@@ -44,6 +44,52 @@
 
       <button type="submit">Confirmar asistencia</button>
     </form>
+    <form 
+  action="https://usebasin.com/f/tu-endpoint-aqui" 
+  method="POST"
+  accept-charset="UTF-8"
+>
+  <h2>Confirma tu asistencia 🎉</h2>
+
+  <label>
+    Nombre y apellidos *
+    <input type="text" name="nombre" required>
+  </label>
+
+  <label>
+    ¿Vendrás a la boda? *
+    <select name="asistencia" required>
+      <option value="">Selecciona una opción</option>
+      <option value="sí">¡Sí! 🎊</option>
+      <option value="no">Lo siento, no puedo 😢</option>
+    </select>
+  </label>
+
+  <label>
+    ¿Cuántas personas sois?
+    <input type="number" name="acompañantes" min="1" value="1">
+  </label>
+
+  <label>
+    ¿Alguna alergia o restricción alimentaria?
+    <input type="text" name="restricciones" placeholder="Ej: sin gluten, vegetariano…">
+  </label>
+
+  <label>
+    Canción que no puede faltar en la fiesta 💃
+    <input type="text" name="cancion_fiesta" placeholder="Título o artista">
+  </label>
+
+  <label>
+    ¿Algún mensaje para los novios?
+    <textarea name="mensaje" rows="4" placeholder="Os queremos, ¡qué viva el amor!"></textarea>
+  </label>
+
+  <!-- Redirección opcional tras el envío -->
+  <input type="hidden" name="_redirect" value="https://boda-andrea-alberto.github.io/gracias.html">
+
+  <button type="submit">Enviar</button>
+</form>
 
     <p class="gracias">¡Gracias por confirmar! ¡Nos hace mucha ilusión verte! 💖</p>
   </div>
