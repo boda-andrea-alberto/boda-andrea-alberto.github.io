@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrea & Alberto — Nuestra Boda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Andrea & Alberto</h1>
+    <p>Nos casamos el <strong>18 de octubre de 2025</strong></p>
+    <p>Lugar: <strong>Complejo La Cigüeña, Arganda del Rey (Madrid)</strong></p>
+
+    <h2>¿Te vienes?</h2>
+    <form action="https://formspree.io/f/tuID" method="POST">
+      <label>Nombre completo
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>¿Vas a venir?
+        <select name="asistencia" required>
+          <option value="">Selecciona</option>
+          <option value="sí">¡Sí, claro!</option>
+          <option value="no">No puedo 😢</option>
+        </select>
+      </label>
+
+      <label>¿Vienes con acompañante?
+        <select name="acompañante" required>
+          <option value="">Selecciona</option>
+          <option value="sí">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+
+      <label>¿Tienes alguna alergia o intolerancia?
+        <input type="text" name="alergias" placeholder="(puedes dejarlo en blanco)">
+      </label>
+
+      <label>¿Qué canción no puede faltar en la fiesta?
+        <input type="text" name="cancion" placeholder="¡Pide la tuya!">
+      </label>
+
+      <button type="submit">Confirmar asistencia</button>
+    </form>
+
+    <p class="gracias">¡Gracias por confirmar! ¡Nos hace mucha ilusión verte! 💖</p>
+  </div>
+</body>
+</html>
