@@ -1,66 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andrea & Alberto — Nuestra Boda</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Andrea & Alberto</h1>
-    <p>Nos casamos el <strong>18 de octubre de 2025</strong></p>
-    <p>Lugar: <strong>Complejo La Cigüeña, Arganda del Rey (Madrid)</strong></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea & Alberto — Nuestra Boda</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Andrea y Alberto</h1>
+      <p>Nos vamos de boda el <strong>18 de octubre de 2025</strong></p>
+      <h2>Ubicación</h2>
+      <p>
+        Te esperamos en el <a href="https://maps.app.goo.gl/64BY8XHLGsvdFVR7A" target="_blank">Complejo “La Cigüeña”</a>, en la carretera de Chinchón cerca de Arganda del Rey.
+      </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.259269852493!2d-3.5159678225875104!3d40.29220187145986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42153e85669aad%3A0x9653985d0c20cca9!2zQ29tcGxlam8gTGEgQ2lnw7xlw7Fh!5e0!3m2!1ses!2ses!4v1750149813160!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Habrá parking disponible señalizado dentro del complejo.</p>
+      <p>Además, habrá disponible un vehículo habilitado para acceder a la zona de la ceremonia y a la finca para personas con movilidad reducida, tacones traicioneros o que quieran sentirse como estrellas de cine.</p>
+      <h2>Horario</h2>
+      <p>La ceremonia comenzará a las 13:00, pero se ruega estar media hora antes.</p>
+      <h3>Dresscode</h3>
+      <p>El que quieras, escuchamos pero no juzgamos 😛</p>
 
-    <h2>¿Te vienes?</h2>
-    <form 
-  action="https://usebasin.com/f/ec5372daa6e3" 
-  method="POST"
-  accept-charset="UTF-8"
->
-  <h2>Confirma tu asistencia 🎉</h2>
+      <button id="abrirModal" class="boton-modal">¿No sabes qué regalarnos?</button>
+      <h2>¿Te vienes?</h2>
+      <h3>Ahora es tu turno ¡Acción! 🎉</h3>
+      <form
+        action="https://usebasin.com/f/tu-endpoint-aqui"
+        method="POST"
+        accept-charset="UTF-8"
+      >
+        <label>
+          Nombre y apellidos *
+          <input type="text" name="nombre" required />
+        </label>
 
-  <label>
-    Nombre y apellidos *
-    <input type="text" name="nombre" required>
-  </label>
+        <label>
+          ¿Vendrás a la boda? *
+          <select name="asistencia" required>
+            <option value="">Selecciona una opción</option>
+            <option value="sí">La duda ofende 🎉</option>
+            <option value="no">Lo siento, no puedo 😢</option>
+          </select>
+        </label>
 
-  <label>
-    ¿Vendrás a la boda? *
-    <select name="asistencia" required>
-      <option value="">Selecciona una opción</option>
-      <option value="sí">¡Sí! 🎊</option>
-      <option value="no">Lo siento, no puedo 😢</option>
-    </select>
-  </label>
+        <label>
+          ¿Cuántas personas sois (contándote a ti)? *
+          <select
+            name="acompañantes"
+            id="acompanantes"
+            required
+            onchange="mostrarInvitados()"
+          >
+            <option value="1">Solo yo</option>
+            <option value="2">+1</option>
+            <option value="3">+2</option>
+            <option value="4">+3</option>
+            <option value="5">+4</option>
+            <option value="6">+5</option>
+          </select>
+        </label>
+        <p id="invitadosTexto" style="display: none;">¡Perfecto! Cuéntanos quén viene contigo. Nombres y apellidos, que no queremos poner etiquetas en la mesa para “El primo de la tía Paqui”</p>
+        <div id="invitadosExtra"></div>
 
-  <label>
-    ¿Cuántas personas sois?
-    <input type="number" name="acompañantes" min="1" value="1">
-  </label>
+        <label>
+          ¿Traes niños?
+          <input
+            type="text"
+            name="ninos"
+            placeholder="Cuántos o sus nombres, si quieres"
+          />
+        </label>
 
-  <label>
-    ¿Alguna alergia o restricción alimentaria?
-    <input type="text" name="restricciones" placeholder="Ej: sin gluten, vegetariano…">
-  </label>
+        <label>
+          ¿Alguna alergia o restricción alimentaria? Si sois varios, porfa, indica el nombre de cada persona y su restricción.
+          <input
+            type="text"
+            name="restricciones"
+            placeholder="Ej: sin gluten, vegetariano…"
+          />
+        </label>
 
-  <label>
-    Canción que no puede faltar en la fiesta 💃
-    <input type="text" name="cancion_fiesta" placeholder="Título o artista">
-  </label>
+        <label>
+          ¿Cómo podemos contactarte si hiciera falta? No es obligatorio.
+          <input
+            type="text"
+            name="contacto"
+            placeholder="Teléfono, email, lo que prefieras"
+            required
+          />
+        </label>
 
-  <label>
-    ¿Algún mensaje para los novios?
-    <textarea name="mensaje" rows="4" placeholder="Os queremos, ¡qué viva el amor!"></textarea>
-  </label>
+        <label>
+          ¿Necesitas alojamiento?
+          <select name="alojamiento">
+            <option value="">Selecciona una opción</option>
+            <option value="sí">Sí, agradezco las recomendaciones</option>
+            <option value="no">No, tengo donde pasar la noche</option>
+          </select>
+        </label>
 
-  <!-- Redirección opcional tras el envío -->
-  <input type="hidden" name="_redirect" value="https://boda-andrea-alberto.github.io/gracias.html">
+        <label>
+          Ayúdanos a elegir la banda sonora de nuestra boda ¿Qué canción no puede faltar?<input
+            type="text"
+            name="cancion_fiesta"
+            placeholder="Título o artista"
+          />
+        </label>
 
-  <button type="submit">Enviar</button>
-</form>
+        <label>
+          ¿Te quedas después a darlo todo con nosotros? La fiesta en la finca promete, pero estamos valorando alargar la noche con un plan extra para quien aún tenga cuerda. ¿Te apetecería seguir bailando, cantando o simplemente disfrutando en otro sitio más tarde?
+          <select name="fiesta">
+            <option value="">Selecciona una opción</option>
+            <option value="sí">¡Hasta que el cuerpo aguante!</option>
+            <option value="quizas">No me gusta comprometerme</option>
+            <option value="no">Soy más de peli y manta pos-banquete</option>
+          </select>
+        </label>
 
-    <p class="gracias">¡Gracias por confirmar! ¡Nos hace mucha ilusión verte! 💖</p>
+        <label>
+          ¿Algún mensaje para los novios? Muéstranos las ganas que tienes de celebrar ese día con nosotros
+          <textarea
+            name="mensaje"
+            rows="4"
+            placeholder="Love is in the air"
+          ></textarea>
+        </label>
+
+        <!-- Redirección opcional tras el envío -->
+        <input
+          type="hidden"
+          name="_redirect"
+          value="https://boda-andrea-alberto.github.io/gracias.html"
+        />
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p class="gracias">
+        ¡Gracias por confirmar! ¡Nos hace mucha ilusión verte! 💖
+      </p>
+    </div>
+    <div id="modalRegalo" class="modal oculto">
+  <div class="modal-contenido">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+    <h2>¡Tu presencia es el mejor regalo! ❤️</h2>
+    <p>Pero si aún así quieres tener un detalle, puedes hacerlo aquí:</p>
+    <p><strong>Cuenta bancaria:</strong> ES12 3456 7890 1234 5678 9012</p>
+    <p><small>(¡Gracias de corazón!)</small></p>
   </div>
-</body>
+</div>
+    <script src="scripts.js"></script>
+  </body>
 </html>
