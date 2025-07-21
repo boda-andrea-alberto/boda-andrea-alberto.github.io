@@ -1,18 +1,130 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #fffdf7;
+    background: #fff;
     color: #333;
     margin: 0;
-    padding: 2rem;
+    padding: 0;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+
+  a{
+    text-decoration: none;
+    color: #2C5EA9;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+  html {
+  scroll-behavior: smooth;
+}
+
+  .playfair{
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::-moz-selection {
+  background-color: #2C5EA9;
+  color: #fff;
+}
+
+::selection {
+  background-color: #2C5EA9;
+  color: #fff;
+}
+
+  .menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    color: #2C5EA9;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .menu ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .banner-boda{
+    width: 100%;
+    position: relative;
+  }
+
+  .banner-img{
+    max-width: 100%;
+  }
+
+  .banner-txt-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .banner-tit{
+    font-size: 60px;
+    line-height: 63px;
+    margin-bottom: 12px;
+  }
+
+  .banner-tit-casamos{
+    text-transform: uppercase;
+  }
+
+  .banner-subtit{
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .fecha-container{
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px #2C5EA9 solid;
+  }
+
+  .fecha-subtit{
+    font-size: 15px;
+  }
+
+  .fecha{
+    font-size: 45px;
+    font-weight: 700;
+    color: #2C5EA9;
+  }
+
+  .ubicacion-container{
+    display: flex;
+    border-bottom: #2C5EA9 solid 2px;
+  }
+
+  .ubicacion-drch{
+    width: 50%;
+  }
+
+  .ubicacion-izq{
+    width: 50%;
+    padding: 30px;
+  }
+
+  .ubicacion-tit{
+    text-align: center;
+    color: #2C5EA9;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .escenas-img{
+    max-width: 100%;
+  }
+
+  .info-drch{
+    padding: 40px;
   }
   
   h1 {
@@ -20,6 +132,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: #2C5EA9;
   }
   
   h2 {
@@ -31,6 +144,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-image: url("assets/images/fondo-form.png");
   }
   
   label {
@@ -109,8 +223,14 @@ body {
 }
 
 /* Botón modal */
+
+.button-container{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .boton-modal {
-  background-color: #7e5a9b;
+  background-color: #2C5EA9;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
