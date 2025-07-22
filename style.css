@@ -1,196 +1,276 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-  a{
-    text-decoration: none;
-    color: #2C5EA9;
-  }
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #2c5ea9;
+}
 
-  a:hover{
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  html {
+html {
   scroll-behavior: smooth;
 }
 
-  .playfair{
-    font-family: 'Playfair Display', serif;
-  }
+.playfair {
+  font-family: "Playfair Display", serif;
+}
 
-  ::-moz-selection {
-  background-color: #2C5EA9;
+::-moz-selection {
+  background-color: #2c5ea9;
   color: #fff;
 }
 
 ::selection {
-  background-color: #2C5EA9;
+  background-color: #2c5ea9;
   color: #fff;
 }
 
-  .menu ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    color: #2C5EA9;
-    font-size: 20px;
-    margin-top: 5px;
-  }
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  color: #2c5ea9;
+  font-size: 20px;
+  margin-top: 5px;
+}
 
-  .menu ul li{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.menu ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-  .banner-boda{
-    width: 100%;
-    position: relative;
-  }
+.banner-boda {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
 
-  .banner-img{
-    max-width: 100%;
-  }
+.banner-img {
+  width: 100%;
+  max-width: 1800px;
+}
 
-  .banner-txt-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  }
+.banner-txt-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
-  .banner-tit{
-    font-size: 60px;
-    line-height: 63px;
-    margin-bottom: 12px;
-  }
+.banner-tit {
+  font-size: 60px;
+  line-height: 63px;
+  margin-bottom: 12px;
+}
 
-  .banner-tit-casamos{
-    text-transform: uppercase;
-  }
+.banner-tit-casamos {
+  text-transform: uppercase;
+}
 
-  .banner-subtit{
-    font-size: 20px;
-    font-weight: 300;
-  }
+.banner-subtit {
+  font-size: 20px;
+  font-weight: 300;
+}
 
-  .fecha-container{
-    text-align: center;
-    padding: 20px;
-    border-bottom: 2px #2C5EA9 solid;
-  }
+.fecha-container {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px #2c5ea9 solid;
+}
 
-  .fecha-subtit{
-    font-size: 15px;
-  }
+.fecha-subtit {
+  font-size: 15px;
+}
 
-  .fecha{
-    font-size: 45px;
-    font-weight: 700;
-    color: #2C5EA9;
-  }
+.fecha {
+  font-size: 45px;
+  font-weight: 700;
+  color: #2c5ea9;
+}
 
-  .ubicacion-container{
-    display: flex;
-    border-bottom: #2C5EA9 solid 2px;
-  }
+.ubicacion-container {
+  display: flex;
+  border-bottom: #2c5ea9 solid 2px;
+}
 
-  .ubicacion-drch{
-    width: 50%;
-  }
+.ubicacion-drch {
+  width: 50%;
+}
 
-  .ubicacion-izq{
-    width: 50%;
-    padding: 30px;
-  }
+.ubicacion-izq {
+  width: 50%;
+  padding: 30px;
+}
 
-  .ubicacion-tit{
-    text-align: center;
-    color: #2C5EA9;
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
+.ubicacion-tit {
+  text-align: center;
+  color: #2c5ea9;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
 
-  .escenas-img{
-    max-width: 100%;
-  }
+.escenas-img {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+}
 
-  .info-drch{
-    padding: 40px;
-  }
-  
-  h1 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #2C5EA9;
-  }
-  
-  h2 {
-    font-family: 'Playfair Display', serif;
-    margin-top: 2rem;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-image: url("assets/images/fondo-form.png");
-  }
-  
-  label {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-  }
-  
-  input, select, textarea {
-    margin-top: 0.3rem;
-    padding: 0.6rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  button {
-    background: #e57373;
-    color: white;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  button:hover {
-    background: #d64f4f;
-  }
-  
-  .gracias {
-    margin-top: 2rem;
-    text-align: center;
-    font-style: italic;
-    color: #666;
-  }
-  
-  /* Modal general */
+.info-drch {
+  padding: 30px;
+}
+
+.info-izq{
+border-bottom: #2c5ea9 solid 2px;
+text-align: center;
+}
+
+.ilustracion{
+  max-width: 290px;
+  margin-bottom: -4px;
+}
+
+.frase-1 {
+  text-align: center;
+  font-size: 30px;
+  color: #2c5ea9;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.frase-2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #2c5ea9;
+}
+
+.frase-3 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.frase-4 {
+  text-align: center;
+  margin-top: 35px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #2c5ea9;
+}
+
+.horario-row {
+  display: flex;
+  border-bottom: #2c5ea9 2px solid;
+}
+
+.horario-izq {
+  border-right: #2c5ea9 2px solid;
+}
+
+.horario-izq,
+.horario-drch {
+  padding: 30px;
+}
+
+.horario-tit {
+  color: #2c5ea9;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.dresscode-tit {
+  color: #2c5ea9;
+  font-weight: 700;
+  font-size: 23px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c5ea9;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  margin-top: 2rem;
+  color: #2c5ea9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 40px;
+  padding-bottom: 75px;
+}
+
+.form-container {
+  background-image: url("assets/images/fondo-form.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1800px;
+  margin: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #2c5ea9;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+  margin-top: 10px;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #2c5ea9;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+.gracias {
+  margin-top: 2rem;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Modal general */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,7 +285,7 @@ body {
   max-width: 400px;
   text-align: center;
   position: relative;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Botón cerrar (X) */
@@ -215,6 +295,7 @@ body {
   right: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #2c5ea9;
 }
 
 /* Clase para ocultar */
@@ -224,17 +305,51 @@ body {
 
 /* Botón modal */
 
-.button-container{
+.button-container {
   text-align: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: #2c5ea9 5px dashed;
 }
 
-.boton-modal {
-  background-color: #2C5EA9;
+button {
+  background-color: #2c5ea9;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 50px;
+  border: 2px solid #2c5ea9;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #2c5ea9;
+  border: 2px solid #2c5ea9;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .banner-tit{
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .fecha{
+    font-size: 38px;
+  }
 }

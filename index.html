@@ -31,6 +31,7 @@
           <div class="banner-subtit">Y os invitamos a una velada de cine</div>
         </div>
       </div>
+      <div class="container">
       <div class="fecha-container">
         <div class="fecha-subtit">Nos vamos de boda el</div>
         <div class="fecha playfair">18 de Octubre</div>
@@ -57,23 +58,38 @@
           ></iframe>
         </div>
       </div>
-        <div class="info-izq"></div>
+      <div class="info-container">
+        
         <div class="info-drch">
           Habrá parking disponible señalizado dentro del complejo. Además, habrá
           disponible un vehículo habilitado para acceder a la zona de la
           ceremonia y a la finca para personas con movilidad reducida, tacones
           traicioneros o que quieran sentirse como estrellas de cine.
         </div>
+        <div class="info-izq"><img class="ilustracion" src="assets/images/ilustracion.png"></div>
+        </div>
+        <div class="horario-row">
+          <div class="horario-izq">
+            <div class="horario-tit playfair">Horario</div>
+            <div class="horario-txt">La ceremonia comenzará a las 13:00, pero se ruega estar media hora antes.</div>
+          </div>
+          <div class="horario-drch">
+            <div class="dresscode-tit playfair">Dresscode</div>
+            <div class="dresscode-txt">El que quieras, escuchamos pero no juzgamos 😛</div>
+          </div>
+        </div>
         <div class="button-container">
-        <button id="abrirModal" class="boton-modal">
+        <button id="abrirModal" class="boton-modal playfair">
           ¿No sabes qué regalarnos?
         </button>
         </div>
+      </div>
         <div class="pre-form-container">
           <div class="frase-1 playfair">
             Cada escena nos ha traido hasta aquí
           </div>
-          <img class="escenas-img" src="assets/images/escenas.png" />
+          <img class="escenas-img desktop" src="assets/images/escenas.png" />
+          <img class="escenas-img mobile" src="assets/images/escenas_mobile.png" />
           <div class="frase-2 playfair">
             Y ahora queremos que formes parte de la siguiente ...
           </div>
@@ -82,133 +98,135 @@
           </div>
           <div class="frase-4 playfair">¿Vienes?</div>
         </div>
+        <div class="form-container">
+          <form
+            action="https://usebasin.com/f/ec5372daa6e3"
+            method="POST"
+            accept-charset="UTF-8"
+            enctype="multipart/form-data"
+            id="form"
+          >
+            <label>
+              Nombre y apellidos *
+              <input type="text" name="nombre" required />
+            </label>
 
-        <form
-          action="https://usebasin.com/f/ec5372daa6e3"
-          method="POST"
-          accept-charset="UTF-8"
-          enctype="multipart/form-data"
-          id="form"
-        >
-          <label>
-            Nombre y apellidos *
-            <input type="text" name="nombre" required />
-          </label>
+            <label>
+              ¿Vendrás a la boda? *
+              <select name="asistencia" required>
+                <option value="">Selecciona una opción</option>
+                <option value="sí">La duda ofende 🎉</option>
+                <option value="no">Lo siento, no puedo 😢</option>
+              </select>
+            </label>
 
-          <label>
-            ¿Vendrás a la boda? *
-            <select name="asistencia" required>
-              <option value="">Selecciona una opción</option>
-              <option value="sí">La duda ofende 🎉</option>
-              <option value="no">Lo siento, no puedo 😢</option>
-            </select>
-          </label>
+            <label>
+              ¿Cuántas personas sois (contándote a ti)? *
+              <select
+                name="acompañantes"
+                id="acompanantes"
+                required
+                onchange="mostrarInvitados()"
+              >
+                <option value="1">Solo yo</option>
+                <option value="2">+1</option>
+                <option value="3">+2</option>
+                <option value="4">+3</option>
+                <option value="5">+4</option>
+                <option value="6">+5</option>
+              </select>
+            </label>
+            <p id="invitadosTexto" style="display: none">
+              ¡Perfecto! Cuéntanos quén viene contigo. Nombres y apellidos, que no
+              queremos poner etiquetas en la mesa para “El primo de la tía Paqui”
+            </p>
+            <div id="invitadosExtra"></div>
 
-          <label>
-            ¿Cuántas personas sois (contándote a ti)? *
-            <select
-              name="acompañantes"
-              id="acompanantes"
-              required
-              onchange="mostrarInvitados()"
-            >
-              <option value="1">Solo yo</option>
-              <option value="2">+1</option>
-              <option value="3">+2</option>
-              <option value="4">+3</option>
-              <option value="5">+4</option>
-              <option value="6">+5</option>
-            </select>
-          </label>
-          <p id="invitadosTexto" style="display: none">
-            ¡Perfecto! Cuéntanos quén viene contigo. Nombres y apellidos, que no
-            queremos poner etiquetas en la mesa para “El primo de la tía Paqui”
-          </p>
-          <div id="invitadosExtra"></div>
+            <label>
+              ¿Traes niños?
+              <input
+                type="text"
+                name="ninos"
+                placeholder="Cuántos o sus nombres, si quieres"
+              />
+            </label>
 
-          <label>
-            ¿Traes niños?
+            <label>
+              ¿Alguna alergia o restricción alimentaria? Si sois varios, porfa,
+              indica el nombre de cada persona y su restricción.
+              <input
+                type="text"
+                name="restricciones"
+                placeholder="Ej: sin gluten, vegetariano…"
+              />
+            </label>
+
+            <label>
+              ¿Cómo podemos contactarte si hiciera falta? No es obligatorio.
+              <input
+                type="text"
+                name="contacto"
+                placeholder="Teléfono, email, lo que prefieras"
+              />
+            </label>
+
+            <label>
+              ¿Necesitas alojamiento?
+              <select name="alojamiento">
+                <option value="">Selecciona una opción</option>
+                <option value="sí">Sí, agradezco las recomendaciones</option>
+                <option value="no">No, tengo donde pasar la noche</option>
+              </select>
+            </label>
+
+            <label>
+              Ayúdanos a elegir la banda sonora de nuestra boda ¿Qué canción no
+              puede faltar?<input
+                type="text"
+                name="cancion_fiesta"
+                placeholder="Título o artista"
+              />
+            </label>
+
+            <label>
+              ¿Te quedas después a darlo todo con nosotros? La fiesta en la finca
+              promete, pero estamos valorando alargar la noche con un plan extra
+              para quien aún tenga cuerda. ¿Te apetecería seguir bailando,
+              cantando o simplemente disfrutando en otro sitio más tarde?
+              <select name="fiesta">
+                <option value="">Selecciona una opción</option>
+                <option value="sí">¡Hasta que el cuerpo aguante!</option>
+                <option value="quizas">No me gusta comprometerme</option>
+                <option value="no">Soy más de peli y manta pos-banquete</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Algún mensaje para los novios? Muéstranos las ganas que tienes de
+              celebrar ese día con nosotros
+              <textarea
+                name="mensaje"
+                rows="4"
+                placeholder="Love is in the air"
+              ></textarea>
+            </label>
             <input
-              type="text"
-              name="ninos"
-              placeholder="Cuántos o sus nombres, si quieres"
+              type="hidden"
+              name="_redirect"
+              value="https://boda-andrea-alberto.github.io/gracias.html"
             />
-          </label>
 
-          <label>
-            ¿Alguna alergia o restricción alimentaria? Si sois varios, porfa,
-            indica el nombre de cada persona y su restricción.
-            <input
-              type="text"
-              name="restricciones"
-              placeholder="Ej: sin gluten, vegetariano…"
-            />
-          </label>
-
-          <label>
-            ¿Cómo podemos contactarte si hiciera falta? No es obligatorio.
-            <input
-              type="text"
-              name="contacto"
-              placeholder="Teléfono, email, lo que prefieras"
-            />
-          </label>
-
-          <label>
-            ¿Necesitas alojamiento?
-            <select name="alojamiento">
-              <option value="">Selecciona una opción</option>
-              <option value="sí">Sí, agradezco las recomendaciones</option>
-              <option value="no">No, tengo donde pasar la noche</option>
-            </select>
-          </label>
-
-          <label>
-            Ayúdanos a elegir la banda sonora de nuestra boda ¿Qué canción no
-            puede faltar?<input
-              type="text"
-              name="cancion_fiesta"
-              placeholder="Título o artista"
-            />
-          </label>
-
-          <label>
-            ¿Te quedas después a darlo todo con nosotros? La fiesta en la finca
-            promete, pero estamos valorando alargar la noche con un plan extra
-            para quien aún tenga cuerda. ¿Te apetecería seguir bailando,
-            cantando o simplemente disfrutando en otro sitio más tarde?
-            <select name="fiesta">
-              <option value="">Selecciona una opción</option>
-              <option value="sí">¡Hasta que el cuerpo aguante!</option>
-              <option value="quizas">No me gusta comprometerme</option>
-              <option value="no">Soy más de peli y manta pos-banquete</option>
-            </select>
-          </label>
-
-          <label>
-            ¿Algún mensaje para los novios? Muéstranos las ganas que tienes de
-            celebrar ese día con nosotros
-            <textarea
-              name="mensaje"
-              rows="4"
-              placeholder="Love is in the air"
-            ></textarea>
-          </label>
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://boda-andrea-alberto.github.io/gracias.html"
-          />
-
-          <button type="submit">Enviar</button>
-        </form>
+            <button type="submit">Enviar</button>
+          </form>
+          
+        </div>
       </div>
     </main>
     <div id="modalRegalo" class="modal oculto">
       <div class="modal-contenido">
         <span id="cerrarModal" class="cerrar">&times;</span>
         <h2>¡Tu presencia es el mejor regalo! ❤️</h2>
-        <p>Pero si aún así quieres tener un detalle, puedes hacerlo aquí:</p>
+        <p>Pero si aún así quieres tener un detalle,<br> puedes hacerlo aquí:</p>
         <p><strong>Cuenta bancaria:</strong> ES12 3456 7890 1234 5678 9012</p>
         <p><small>(¡Gracias de corazón!)</small></p>
       </div>
