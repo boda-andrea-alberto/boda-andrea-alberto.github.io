@@ -105,6 +105,7 @@ html {
 
 .ubicacion-container {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: #2c5ea9 solid 2px;
 }
 
@@ -113,7 +114,7 @@ html {
 }
 
 .ubicacion-izq {
-  width: 50%;
+  width: 45%;
   padding: 30px;
 }
 
@@ -223,7 +224,10 @@ form {
   max-width: 750px;
   margin: auto;
   margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
   padding-bottom: 75px;
+  border-radius: 8px;
 }
 
 .form-container {
@@ -234,13 +238,14 @@ form {
   margin: auto;
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom:50px;
 }
 
 label {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
-  color: #2c5ea9;
+  font-weight: 300;
+  color: #fff;
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -251,9 +256,18 @@ textarea {
   margin-top: 10px;
   padding: 0.6rem;
   border-radius: 6px;
-  border: 1px solid #2c5ea9;
+  border: 3px solid #2c5ea9;
   font-family: "Roboto", sans-serif;
-  color: #000;
+  color: #fff;
+  background: transparent;
+  font-style: italic;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+  font-style: italic;
+  opacity: 1; 
 }
 
 .gracias {
@@ -329,6 +343,55 @@ button:hover {
   border: 2px solid #2c5ea9;
 }
 
+.faq-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: #2c5ea9;
+  margin-top: 15px;
+  border: #fff solid 2px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+
 .desktop {
   display: block;
 }
@@ -351,5 +414,9 @@ button:hover {
   }
   .fecha{
     font-size: 38px;
+  }
+
+  .ubicacion-izq, .ubicacion-drch{
+    width: 100%;
   }
 }

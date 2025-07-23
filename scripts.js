@@ -26,6 +26,11 @@ function mostrarInvitados() {
   }
 }
 
+function toggleFaq(button) {
+    const item = button.parentElement;
+    item.classList.toggle("open");
+  }
+
 document.addEventListener("DOMContentLoaded", () => {
   const abrir = document.getElementById("abrirModal");
   const cerrar = document.getElementById("cerrarModal");

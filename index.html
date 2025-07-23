@@ -18,6 +18,7 @@
         <ul>
           <li><a href="#ubicacion">Ubicación</a></li>
           <li><a href="#form">Confirmar asistencia</a></li>
+          <li><a href="#faqs">Faqs</a></li>
         </ul>
       </div>
     </header>
@@ -60,12 +61,12 @@
       </div>
       <div class="info-container">
         
-        <div class="info-drch">
+        <!-- <div class="info-drch">
           Habrá parking disponible señalizado dentro del complejo. Además, habrá
           disponible un vehículo habilitado para acceder a la zona de la
           ceremonia y a la finca para personas con movilidad reducida, tacones
           traicioneros o que quieran sentirse como estrellas de cine.
-        </div>
+        </div> -->
         <div class="info-izq"><img class="ilustracion" src="assets/images/ilustracion.png"></div>
         </div>
         <div class="horario-row">
@@ -96,18 +97,11 @@
           <div class="frase-3">
             Porque esta película no estaría completa sin ti.
           </div>
-          <div class="frase-4 playfair">¿Vienes?</div>
+          <div class="frase-4 playfair">¿Te vienes? Ahora es tu turno ¡Acción!</div>
         </div>
         <div class="form-container">
-          <!-- <form
-            action="https://usebasin.com/f/cf7b94cca164"
-            method="POST"
-            accept-charset="UTF-8"
-            enctype="multipart/form-data"
-            id="form"
-          > -->
           <form
-            action="https://formsubmit.co/bodaandreaalberto@gmail.com"
+            action="https://usebasin.com/f/cf7b94cca164"
             method="POST"
             accept-charset="UTF-8"
             enctype="multipart/form-data"
@@ -217,11 +211,100 @@
                 placeholder="Love is in the air"
               ></textarea>
             </label>
-            <input type="hidden" name="_next" value="https://boda-andrea-alberto.github.io/gracias.html">
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://boda-andrea-alberto.github.io/gracias.html"
+            />
+
             <button type="submit">Enviar</button>
           </form>
           
         </div>
+        <section class="faq-section" id="faqs">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Qué pasa si me canso de mi calzado?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      ¡No te preocupes! Sabemos que lo mejor para darlo todo es estar a gusto. Tendremos un rincón con calzado cómodo para que puedas seguir la fiesta sin dolor de pies.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Habrá algo por si necesito asearme o retocarme?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      ¡Claro! En los baños encontrarás kits de aseo con todo lo que puedas necesitar. Para cualquier imprevisto, allí estará.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Y si necesito un retoque de maquillaje?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Contaremos con un servicio de maquillaje en la finca durante la fiesta. Si quieres estar siempre a punto para las fotos, solo tienes que acercarte.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Desayuno antes o no?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Si puedes, aguanta, porque nos hemos encargado de que os pongáis finos filipinos.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Hay menú para alérgicos, veganos o vegetarianos?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Por supuesto. Si tienes alguna alergia o preferencia alimentaria, háznoslo saber en el formulario cuanto antes para que podamos avisar al catering y que tengas un menú especial.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Dónde puedo dejar el coche?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Habrá un parking señalizado desde la entrada del complejo, fácil de localizar y con personal para orientarte.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Cómo se realizará el paso de la zona de la ceremonia a la finca?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      No está lejos, habrá gente encargada de señalizar cómo llegar si se quiere ir a pie. Además, habrá un vehículo disponible para personas con movilidad reducida o quienes lo necesiten.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Qué pasa si llueve?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      ¡No pasa nada! Tenemos plan B preparado para que la boda siga siendo igual de bonita aunque el tiempo no acompañe.
+    </div>
+  </div>
+</section>
+
       </div>
     </main>
     <div id="modalRegalo" class="modal oculto">
@@ -229,7 +312,7 @@
         <span id="cerrarModal" class="cerrar">&times;</span>
         <h2>¡Tu presencia es el mejor regalo! ❤️</h2>
         <p>Pero si aún así quieres tener un detalle,<br> puedes hacerlo aquí:</p>
-        <p><strong>Cuenta bancaria:</strong> ES12 3456 7890 1234 5678 9012</p>
+        <p><strong>Cuenta bancaria:</strong> ES92 0081 2714 1400 2810 7431</p>
         <p><small>(¡Gracias de corazón!)</small></p>
       </div>
     </div>
