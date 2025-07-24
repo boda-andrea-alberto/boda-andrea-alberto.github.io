@@ -37,6 +37,7 @@
         <div class="fecha-subtit">Nos vamos de boda el</div>
         <div class="fecha playfair">18 de Octubre</div>
       </div>
+      
       <div class="ubicacion-container" id="ubicacion">
         <div class="ubicacion-izq">
           <div class="ubicacion-tit playfair">Ubicación</div>
@@ -67,6 +68,15 @@
           ceremonia y a la finca para personas con movilidad reducida, tacones
           traicioneros o que quieran sentirse como estrellas de cine.
         </div> -->
+        <section class="countdown-container">
+  <h2>Cuenta atrás para el gran día 🎉</h2>
+  <div id="countdown" class="countdown">
+    <div><span id="days">00</span><small>Días</small></div>
+    <div><span id="hours">00</span><small>Horas</small></div>
+    <div><span id="minutes">00</span><small>Minutos</small></div>
+    <div><span id="seconds">00</span><small>Segundos</small></div>
+  </div>
+</section>
         <div class="info-izq"><img class="ilustracion" src="assets/images/ilustracion.png"></div>
         </div>
         <div class="horario-row">
@@ -223,7 +233,15 @@
         </div>
         <section class="faq-section" id="faqs">
   <h2>Preguntas frecuentes</h2>
-
+<div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      ¿Hasta cuándo tengo para responder el formulario?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Sin agobios, tienes hasta un mes antes de la boda.
+    </div>
+  </div>
   <div class="faq-item">
     <button class="faq-question" onclick="toggleFaq(this)">
       ¿Qué pasa si me canso de mi calzado?
@@ -236,7 +254,7 @@
 
   <div class="faq-item">
     <button class="faq-question" onclick="toggleFaq(this)">
-      ¿Habrá algo por si necesito asearme o retocarme?
+      ¿Habrá algo por si necesito asearme?
       <span class="faq-icon">+</span>
     </button>
     <div class="faq-answer">
