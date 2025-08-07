@@ -263,6 +263,10 @@ textarea {
   font-style: italic;
 }
 
+select option {
+  color: #2c5ea9;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #fff;
